@@ -1,0 +1,1197 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Sonali Bubu ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Pacifico&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#08000f;
+    color:white;
+    font-family:'DM Sans',sans-serif;
+    overflow-x:hidden;
+}
+
+button{
+    font-family:inherit;
+}
+
+/* ================= LOADER ================= */
+
+#loader{
+    position:fixed;
+    inset:0;
+    background:#08000f;
+    z-index:9999;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    transition:1s ease;
+}
+
+#loader.hide{
+    opacity:0;
+    visibility:hidden;
+}
+
+.loader-heart{
+    font-size:75px;
+    animation:heartbeat 1s infinite;
+}
+
+.loader-text{
+    margin-top:20px;
+    font-size:12px;
+    letter-spacing:4px;
+    color:#ff9dcc;
+    text-align:center;
+}
+
+.loader-bar{
+    width:180px;
+    height:4px;
+    background:#28142f;
+    border-radius:10px;
+    margin-top:25px;
+    overflow:hidden;
+}
+
+.loader-progress{
+    width:0;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        #ff3f98,
+        #8d5cff
+    );
+    animation:loading 3s forwards;
+}
+
+@keyframes loading{
+    to{width:100%;}
+}
+
+@keyframes heartbeat{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.25);}
+}
+
+
+/* ================= BACKGROUND ================= */
+
+.glow{
+    position:fixed;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    filter:blur(110px);
+    opacity:.22;
+    pointer-events:none;
+}
+
+.glow1{
+    background:#ff258d;
+    top:-120px;
+    left:-120px;
+}
+
+.glow2{
+    background:#7045ff;
+    right:-120px;
+    bottom:-120px;
+}
+
+#hearts{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:1;
+}
+
+.heart{
+    position:absolute;
+    bottom:-40px;
+    animation:floatUp linear forwards;
+    opacity:.7;
+}
+
+@keyframes floatUp{
+    to{
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+        opacity:0;
+    }
+}
+
+
+/* ================= COMMON ================= */
+
+section{
+    min-height:100vh;
+    padding:80px 18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    z-index:2;
+}
+
+.container{
+    width:100%;
+    max-width:700px;
+    text-align:center;
+    margin:auto;
+}
+
+.gradient{
+    background:
+        linear-gradient(
+            90deg,
+            #fff,
+            #ff9dcc,
+            #ffd166,
+            #fff
+        );
+    background-size:300%;
+    -webkit-background-clip:text;
+    color:transparent;
+    animation:gradient 5s linear infinite;
+}
+
+@keyframes gradient{
+    to{background-position:300%;}
+}
+
+.pill{
+    display:inline-block;
+    padding:8px 15px;
+    border-radius:100px;
+    border:1px solid rgba(255,255,255,.2);
+    background:rgba(255,255,255,.05);
+    color:#ffaad2;
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.btn{
+    border:none;
+    padding:15px 25px;
+    border-radius:100px;
+    color:white;
+    font-weight:700;
+    font-size:15px;
+    cursor:pointer;
+    margin-top:25px;
+    background:
+        linear-gradient(
+            135deg,
+            #ff3f98,
+            #754cff
+        );
+    box-shadow:
+        0 10px 30px
+        rgba(255,60,150,.3);
+    transition:.25s;
+}
+
+.btn:hover{
+    transform:translateY(-3px) scale(1.03);
+}
+
+.btn:active{
+    transform:scale(.95);
+}
+
+
+/* ================= HERO ================= */
+
+.hero-small{
+    font-size:12px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    opacity:.65;
+    margin-bottom:25px;
+}
+
+.hero-emoji{
+    font-size:65px;
+    animation:bounce 1.5s infinite;
+}
+
+@keyframes bounce{
+    50%{
+        transform:translateY(-15px);
+    }
+}
+
+.hero h1{
+    font-size:clamp(50px,15vw,95px);
+    line-height:.88;
+    margin-top:25px;
+}
+
+.name{
+    font-family:'Pacifico',cursive;
+    color:#ff9dcc;
+    font-size:
+        clamp(32px,9vw,58px);
+    margin-top:25px;
+}
+
+.hero-text{
+    color:#d7cbdc;
+    line-height:1.8;
+    margin:25px auto 0;
+    max-width:530px;
+}
+
+.scroll{
+    margin-top:50px;
+    font-size:11px;
+    opacity:.45;
+    letter-spacing:2px;
+}
+
+
+/* ================= QUESTION ================= */
+
+.question-card{
+    padding:35px 23px;
+    border-radius:30px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.13);
+    backdrop-filter:blur(15px);
+}
+
+.question-card h2{
+    font-size:
+        clamp(31px,8vw,50px);
+    line-height:1.1;
+    margin-top:22px;
+}
+
+.answer{
+    display:none;
+    margin-top:30px;
+    line-height:1.9;
+    color:#eee;
+    animation:reveal .8s ease;
+}
+
+@keyframes reveal{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+/* ================= TYPING ================= */
+
+.typing{
+    padding:30px 20px;
+}
+
+.typing h2{
+    font-family:'Pacifico',cursive;
+    color:#ff9dcc;
+    font-size:36px;
+    margin:25px 0;
+}
+
+#typingText{
+    min-height:300px;
+    color:#eee;
+    font-size:17px;
+    line-height:2;
+}
+
+.cursor{
+    display:inline-block;
+    width:2px;
+    height:20px;
+    background:#ff9dcc;
+    animation:blink .7s infinite;
+}
+
+@keyframes blink{
+    50%{opacity:0;}
+}
+
+
+/* ================= LOVE LETTER ================= */
+
+.letter{
+    text-align:left;
+    padding:32px 23px;
+    border-radius:28px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.12);
+    backdrop-filter:blur(15px);
+}
+
+.letter h2{
+    text-align:center;
+    color:#ffd166;
+    margin-bottom:25px;
+    font-size:27px;
+}
+
+.letter p{
+    color:#eee;
+    font-size:16px;
+    line-height:1.9;
+}
+
+.pink{
+    color:#ff9dcc;
+    font-weight:700;
+}
+
+
+/* ================= REASONS ================= */
+
+.reasons{
+    display:grid;
+    gap:13px;
+    margin-top:25px;
+}
+
+.reason{
+    text-align:left;
+    padding:17px;
+    border-radius:18px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.06);
+    transition:.3s;
+}
+
+.reason:hover{
+    transform:translateX(5px);
+}
+
+
+/* ================= SECRET ================= */
+
+.secret-message{
+    display:none;
+    margin-top:30px;
+    line-height:2;
+    font-size:18px;
+    animation:reveal .8s ease;
+}
+
+
+/* ================= FINAL ================= */
+
+.final{
+    text-align:center;
+}
+
+.final-heart{
+    font-size:90px;
+    animation:heartbeat 1.2s infinite;
+}
+
+.final h2{
+    font-size:
+        clamp(45px,12vw,75px);
+    line-height:.9;
+    margin-top:25px;
+}
+
+.final-name{
+    font-family:'Pacifico',cursive;
+    color:#ff9dcc;
+    font-size:
+        clamp(33px,9vw,58px);
+    margin-top:25px;
+}
+
+.final-text{
+    color:#ccc;
+    line-height:1.9;
+    margin-top:25px;
+}
+
+
+/* ================= CONFETTI ================= */
+
+.confetti{
+    position:fixed;
+    top:-20px;
+    width:8px;
+    height:14px;
+    z-index:999;
+    animation:fall 4s linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+    }
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer{
+    text-align:center;
+    padding:40px 20px 60px;
+    color:#75677b;
+    font-size:12px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:480px){
+
+    section{
+        padding:70px 15px;
+    }
+
+    .question-card,
+    .letter,
+    .typing{
+        padding:25px 18px;
+    }
+
+    #typingText{
+        font-size:16px;
+        min-height:340px;
+    }
+
+}
+</style>
+</head>
+
+
+<body>
+
+
+<!-- LOADER -->
+
+<div id="loader">
+
+    <div class="loader-heart">❤️</div>
+
+    <div class="loader-text">
+        PREPARING SOMETHING SPECIAL...
+    </div>
+
+    <div class="loader-bar">
+        <div class="loader-progress"></div>
+    </div>
+
+</div>
+
+
+<div class="glow glow1"></div>
+<div class="glow glow2"></div>
+
+<div id="hearts"></div>
+
+
+<!-- ================= HERO ================= -->
+
+<section>
+
+<div class="container">
+
+    <div class="hero-small">
+        🚨 Important announcement 🚨
+    </div>
+
+    <div class="hero-emoji">
+        🎂
+    </div>
+
+    <h1 class="gradient">
+        HAPPY<br>
+        BIRTHDAY
+    </h1>
+
+    <div class="name">
+        Sonali Bubu ❤️
+    </div>
+
+    <p class="hero-text">
+
+        Today isn't just another day.
+
+        <br>
+
+        It's the annual celebration of the person
+        who is simultaneously cute, annoying,
+        adorable, dramatic and somehow
+        still my favourite. 😂❤️
+
+    </p>
+
+    <button class="btn" onclick="party()">
+        🎉 Enter the birthday party
+    </button>
+
+    <div class="scroll">
+        ↓ there's more ↓
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= QUESTION ================= -->
+
+<section>
+
+<div class="container">
+
+    <div class="question-card">
+
+        <span class="pill">
+            🤔 Very serious question
+        </span>
+
+        <h2 class="gradient">
+            Do you know why today is special?
+        </h2>
+
+        <button
+            class="btn"
+            onclick="showAnswer()">
+
+            Tell me 👀
+
+        </button>
+
+        <div
+            class="answer"
+            id="answer">
+
+            Because...
+
+            <br><br>
+
+            <strong class="pink">
+                THE MOST SPECIAL BIRTHDAY GIRL
+                IS OFFICIALLY ONE YEAR MORE AWESOME. 😭❤️
+            </strong>
+
+            <br><br>
+
+            And yes, I'm talking about you,
+            Sonali Bubu. 🫶
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= TYPING MESSAGE ================= -->
+
+<section>
+
+<div class="container">
+
+    <div class="typing">
+
+        <span class="pill">
+            💌 From my heart
+        </span>
+
+        <h2>
+            Dear Sonali...
+        </h2>
+
+        <div id="typingText"></div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= LOVE LETTER ================= -->
+
+<section>
+
+<div class="container">
+
+    <div class="letter">
+
+        <h2>
+            💌 A Birthday Letter For You
+        </h2>
+
+        <p>
+
+            Happy Birthday, Sonali Bubu. ❤️
+
+            <br><br>
+
+            I don't know if I say it enough,
+            but you really are someone very special
+            to me.
+
+            <br><br>
+
+            You're the kind of person who can make
+            a completely normal conversation turn
+            into something I'll remember.
+
+            <br><br>
+
+            You're cute.
+
+            <br>
+
+            You're funny.
+
+            <br>
+
+            You're dramatic.
+
+            <br>
+
+            You're sometimes absolutely impossible. 😂
+
+            <br><br>
+
+            But somehow...
+
+            <br>
+
+            <span class="pink">
+                I wouldn't change any of it.
+            </span>
+
+            <br><br>
+
+            I hope this birthday brings you
+            everything your heart has been waiting for.
+
+            <br><br>
+
+            I hope you laugh more.
+
+            <br>
+
+            Worry less.
+
+            <br>
+
+            Chase your dreams.
+
+            <br>
+
+            Make beautiful memories.
+
+            <br>
+
+            And always remember how incredibly
+            loved you are.
+
+            <br><br>
+
+            You deserve a life full of happiness,
+            peace, success and people who genuinely
+            appreciate the wonderful person you are.
+
+            <br><br>
+
+            And selfishly...
+
+            <br>
+
+            I hope I get to be part of many
+            of those beautiful moments. 🥹
+
+            <br><br>
+
+            So today, birthday girl...
+
+            <br><br>
+
+            Eat the cake. 🎂
+
+            <br>
+
+            Smile like crazy. 😭
+
+            <br>
+
+            Enjoy being spoiled. 👑
+
+            <br>
+
+            And remember...
+
+            <br><br>
+
+            <span class="pink">
+                You are ridiculously special to me. ❤️
+            </span>
+
+            <br><br>
+
+            Happy Birthday, my Sonali Bubu. 🫶
+
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= REASONS ================= -->
+
+<section>
+
+<div class="container">
+
+    <span class="pill">
+        🔬 Totally legitimate research
+    </span>
+
+    <h2 style="
+        font-size:38px;
+        margin-top:22px;
+    ">
+        Why you're my favourite
+    </h2>
+
+    <div class="reasons">
+
+        <div class="reason">
+            💗 You make boring days feel less boring.
+        </div>
+
+        <div class="reason">
+            😂 Your nonsense is somehow entertaining.
+        </div>
+
+        <div class="reason">
+            🥹 You have a way of making people feel special.
+        </div>
+
+        <div class="reason">
+            ✨ You make ordinary moments memorable.
+        </div>
+
+        <div class="reason">
+            🫶 You're someone I genuinely care about.
+        </div>
+
+        <div class="reason">
+            ❤️ And honestly... you're just you.
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SECRET ================= -->
+
+<section>
+
+<div class="container">
+
+    <div class="question-card">
+
+        <span class="pill">
+            🔐 Final level
+        </span>
+
+        <h2>
+            One last thing...
+        </h2>
+
+        <p style="
+            color:#aaa;
+            margin-top:15px;
+            line-height:1.7;
+        ">
+            There is a tiny secret message
+            hidden here.
+        </p>
+
+        <button
+            class="btn"
+            onclick="secret()">
+
+            Open it ❤️
+
+        </button>
+
+        <div
+            id="secretMessage"
+            class="secret-message">
+
+            If I had to choose one person
+            to laugh with,
+
+            <br>
+
+            annoy,
+
+            <br>
+
+            make memories with,
+
+            <br>
+
+            celebrate,
+
+            <br>
+
+            and probably drive slightly crazy...
+
+            <br><br>
+
+            <span class="pink">
+                I'd choose you again. ❤️
+            </span>
+
+            <br><br>
+
+            Happy Birthday, Sonali Bubu.
+
+            <br><br>
+
+            Please stay exactly as wonderfully
+            weird as you are. 🥹
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FINAL REVEAL ================= -->
+
+<section class="final">
+
+<div class="container">
+
+    <div class="final-heart">
+        ❤️
+    </div>
+
+    <h2 class="gradient">
+        HAPPY<br>
+        BIRTHDAY
+    </h2>
+
+    <div class="final-name">
+        Sonali Bubu
+    </div>
+
+    <p class="final-text">
+
+        May this year bring you
+        countless reasons to smile,
+
+        <br>
+
+        beautiful memories,
+
+        <br>
+
+        crazy adventures,
+
+        <br>
+
+        and all the happiness
+        you deserve.
+
+        <br><br>
+
+        Keep smiling.
+
+        <br>
+
+        Keep shining.
+
+        <br>
+
+        Keep being you. ✨
+
+        <br><br>
+
+        <strong class="pink">
+            Today is your day. ❤️
+        </strong>
+
+    </p>
+
+    <button
+        class="btn"
+        onclick="party(200)">
+
+        🎉 HAPPY BIRTHDAY BUBU 🎉
+
+    </button>
+
+</div>
+
+</section>
+
+
+<div class="footer">
+
+    Made with ❤️ exclusively for Sonali Bubu.
+
+    <br><br>
+
+    Birthday girl detected. 👑
+
+    <br>
+
+    Normal behaviour temporarily suspended. 😂
+
+</div>
+
+
+<script>
+
+
+/* ================= LOADER ================= */
+
+window.addEventListener("load",function(){
+
+    setTimeout(function(){
+
+        document
+            .getElementById("loader")
+            .classList.add("hide");
+
+    },3200);
+
+});
+
+
+/* ================= FLOATING HEARTS ================= */
+
+function createHeart(){
+
+    const heart =
+        document.createElement("div");
+
+    heart.className="heart";
+
+    const emojis=[
+        "❤️",
+        "💖",
+        "💕",
+        "💗",
+        "💓",
+        "💞",
+        "✨"
+    ];
+
+    heart.innerHTML=
+        emojis[
+            Math.floor(
+                Math.random()*emojis.length
+            )
+        ];
+
+    heart.style.left=
+        Math.random()*100+"vw";
+
+    heart.style.fontSize=
+        15+Math.random()*25+"px";
+
+    heart.style.animationDuration=
+        5+Math.random()*6+"s";
+
+    document
+        .getElementById("hearts")
+        .appendChild(heart);
+
+    setTimeout(function(){
+        heart.remove();
+    },11000);
+
+}
+
+setInterval(createHeart,600);
+
+
+/* ================= CONFETTI ================= */
+
+function party(amount=120){
+
+    for(let i=0;i<amount;i++){
+
+        const piece=
+            document.createElement("div");
+
+        piece.className="confetti";
+
+        piece.style.left=
+            Math.random()*100+"vw";
+
+        piece.style.background=
+            `hsl(
+                ${Math.random()*360},
+                90%,
+                65%
+            )`;
+
+        piece.style.animationDelay=
+            Math.random()*1.5+"s";
+
+        document.body.appendChild(piece);
+
+        setTimeout(function(){
+            piece.remove();
+        },4500);
+
+    }
+
+}
+
+
+/* ================= QUESTION ================= */
+
+function showAnswer(){
+
+    document
+        .getElementById("answer")
+        .style.display="block";
+
+    party(70);
+
+}
+
+
+/* ================= TYPING ================= */
+
+const message = `Sonali Bubu...
+
+Today is your day.
+
+And honestly, I hope you realise
+just how special you are.
+
+You're not perfect...
+
+You're better than that.
+
+You're wonderfully YOU.
+
+You make me laugh.
+You make normal moments memorable.
+And somehow you've become
+someone I genuinely care about.
+
+So today...
+
+Forget the stress.
+Forget the worries.
+Eat the cake.
+Smile too much.
+Enjoy being spoiled.
+
+Because today the world celebrates
+the day YOU were born.
+
+Happy Birthday, Sonali Bubu. ❤️
+
+You deserve all the happiness
+in the world.`;
+
+let index=0;
+
+function typeMessage(){
+
+    if(index < message.length){
+
+        document
+            .getElementById("typingText")
+            .innerHTML=
+                message
+                .substring(0,index+1)
+                .replace(/\n/g,"<br>")
+                +
+                '<span class="cursor"></span>';
+
+        index++;
+
+        setTimeout(typeMessage,32);
+
+    }
+
+}
+
+setTimeout(typeMessage,3600);
+
+
+/* ================= SECRET ================= */
+
+function secret(){
+
+    document
+        .getElementById("secretMessage")
+        .style.display="block";
+
+    party(100);
+
+}
+
+
+/* ================= FINAL PARTY ================= */
+
+setTimeout(function(){
+
+    // Small automatic celebration
+    party(30);
+
+},5000);
+
+
+</script>
+
+</body>
+</html>
+```
